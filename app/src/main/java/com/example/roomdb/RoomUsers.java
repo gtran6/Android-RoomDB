@@ -7,12 +7,15 @@ import androidx.room.PrimaryKey;
 public class RoomUsers {
     @PrimaryKey(autoGenerate = true)
     private int id;
-    private String userName, userPassword;
+    private String userName, userPassword, name, userHomeAddress, userWorkAddress;
 
-    public RoomUsers(int id, String userName, String userPassword) {
+    public RoomUsers(int id, String userName, String userPassword, String name, String userHomeAddress, String userWorkAddress) {
         this.id = id;
         this.userName = userName;
         this.userPassword = userPassword;
+        this.name = name;
+        this.userHomeAddress = userHomeAddress;
+        this.userWorkAddress = userWorkAddress;
     }
 
     public int getId() {
@@ -37,5 +40,29 @@ public class RoomUsers {
 
     public void setUserPassword(String userPassword) {
         this.userPassword = userPassword;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getUserHomeAddress() {
+        return userHomeAddress;
+    }
+
+    public void setUserHomeAddress(String userHomeAddress) {
+        this.userHomeAddress = userHomeAddress;
+    }
+
+    public String getUserWorkAddress() {
+        return userWorkAddress;
+    }
+
+    public void setUserWorkAddress(String userWorkAddress) {
+        this.userWorkAddress = userWorkAddress;
     }
 }
